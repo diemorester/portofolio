@@ -1,5 +1,3 @@
-import img1 from '../assets/foto.jpg'
-
 export default function AboutSection() {
     const hoverWrapper = (sentence: string) => {
         return sentence.split(/(\s+|(?=\W))/).map((part, idx) => {
