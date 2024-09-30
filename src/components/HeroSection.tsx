@@ -35,13 +35,19 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse md:flex-row min-h-screen justify-center md:gap-16 items-center text-white">
             <div className="flex flex-col px-5 gap-2 md:gap-5">
                 <p className="md:text-xl text-mono hover:text-white">
-                    &lt; &nbsp; Hello. &nbsp; &gt;
+                    &lt;&nbsp;Hello. &nbsp; &gt;
                 </p>
                 <div className="md:text-xl px-[6px]">
                     <p>
                         {wrapWithHoverEffect("My name is")}&nbsp;
                         <span className="font-bold hover:text-mono transition duration-200">
-                            Rahadian Nirwan Zulfikar
+                            Rahadian
+                        </span>&nbsp;
+                        <span className="font-bold hover:text-mono transition duration-200">
+                            Nirwan
+                        </span>&nbsp;
+                        <span className="font-bold hover:text-mono transition duration-200">
+                            Zulfikar
                         </span>.
                     </p>
                     <p>{wrapWithHoverEffect("I am a Web Developer based in Bandung, Indonesia.")}</p>

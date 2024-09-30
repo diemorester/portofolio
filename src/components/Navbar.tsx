@@ -1,17 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ImCross } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaDiscord } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const handleClose = () => setIsOpen(false)
+    const handleClose = (): void => setIsOpen(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
 
     return (
-        <div className="fixed w-full">
-            <div className="flex justify-between px-8 py-5 text-xl font-semibold text-white">
+        <div className="fixed w-full z-50 top-0 left-0">
+            <div className="flex justify-between px-8 py-5">
                 <div className="z-50" onClick={() => setIsOpen(!isOpen)}>
                     {!isOpen ? (
                         <button className="fill-mono hover:fill-white" >
@@ -22,15 +34,14 @@ export default function Navbar() {
                             <ImCross size={30} className="fill-mono hover:fill-white" />
                         </button>)}
                 </div>
-                {/* <button>HIT ME UP</button> */}
             </div>
-            <div className={`transition-all ease-in-out duration-700 ${isOpen ? 'bg-black w-screen h-screen' : 'h-0 overflow-hidden'} `}>
-                <div className={`flex flex-col justify-center gap-3 text-3xl font-bold items-center absolute bottom-0 w-full h-full px-8 transition-opacity duration-700 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`transition-all ease-in-out duration-700 fixed inset-0 bg-black z-40 ${isOpen ? 'w-screen h-screen' : 'h-0 overflow-hidden'}`}>
+                <div className={`flex flex-col justify-center gap-3 text-3xl font-bold items-center absolute w-full h-full px-8 transition-opacity duration-700 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
                     <div>
                         <a href="/" className="text-mono hover:text-white" onClick={handleClose}>HOME</a>
                     </div>
                     <div>
-                        <a href="" className="text-mono hover:text-white" onClick={handleClose}>ABOUT</a>
+                        <a href="#about" className="text-mono hover:text-white" onClick={handleClose}>ABOUT</a>
                     </div>
                     <div>
                         <a href="" className="text-mono hover:text-white" onClick={handleClose}>SKILLS</a>
@@ -42,13 +53,13 @@ export default function Navbar() {
                         <a href="" className="text-mono hover:text-white" onClick={handleClose}>SERVICES</a>
                     </div>
                     <div className="flex gap-6 pt-3">
-                        <a href="https://github.com/diemorester" target="_blank">
+                        <a href="https://github.com/diemorester" target="_blank" rel="noopener noreferrer">
                             <IoLogoGithub size={35} className="fill-mono hover:fill-white" />
                         </a>
-                        <a href="http://discordapp.com/users/388771161208782860" target="_blank">
+                        <a href="http://discordapp.com/users/388771161208782860" target="_blank" rel="noopener noreferrer">
                             <FaDiscord size={35} className="fill-mono hover:fill-white" />
                         </a>
-                        <a href="https://wa.link/fw9mfb" target="_blank">
+                        <a href="https://wa.link/fw9mfb" target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp size={35} className="fill-mono hover:fill-white" />
                         </a>
                     </div>
