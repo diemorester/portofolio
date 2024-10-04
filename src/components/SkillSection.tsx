@@ -17,7 +17,7 @@ export default function SkillsSection() {
         })
     }
     return (
-        <div id="skill" className="min-h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-[137px] gap-16 md:gap-56">
+        <div id="skill" className="min-h-screen flex flex-col justify-center gap-16 md:flex-row md:justify-around items-center px-5">
             <div className="">
                 <div className="flex flex-col gap-8">
                     <div>
