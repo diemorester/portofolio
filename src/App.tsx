@@ -5,7 +5,7 @@ import SkillsSection from "./components/SkillSection";
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen font-space-mono cursor-default">
+    <div className="bg-black font-space-mono cursor-default px-5 md:px-[137px]">
       <Navbar />
       <HeroSection />
       <AboutSection />

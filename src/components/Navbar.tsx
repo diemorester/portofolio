@@ -47,7 +47,7 @@ export default function Navbar() {
                         <a href="#skill" className="text-mono hover:text-white" onClick={handleClose}>SKILLS</a>
                     </div>
                     <div>
-                        <a href="" className="text-mono hover:text-white" onClick={handleClose}>SERVICES</a>
+                        <a href="#service" className="text-mono hover:text-white" onClick={handleClose}>SERVICES</a>
                     </div>
                     <div>
                         <a href="" className="text-mono hover:text-white" onClick={handleClose}>PROJECTS</a>

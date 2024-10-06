@@ -17,11 +17,10 @@ export default function HeroSection() {
         return () => clearInterval(changeHeading);
     }, []);
 
-    // Function to wrap each word and punctuation in a span
     const wrapWithHoverEffect = (sentence: string) => {
         return sentence.split(/(\s+|(?=\W))/).map((part, idx) => {
             if (part.trim() === '') {
-                return part; // return whitespace as is
+                return part;
             }
             return (
                 <span key={idx} className="hover:text-mono transition duration-200">
@@ -33,7 +32,7 @@ export default function HeroSection() {
 
     return (
         <div className="flex flex-col-reverse md:flex-row min-h-screen justify-center md:gap-16 items-center text-white">
-            <div className="flex flex-col px-5 gap-2 md:gap-5">
+            <div className="flex flex-col gap-2 md:gap-5">
                 <p className="md:text-xl text-mono hover:text-white">
                     &lt;&nbsp;Hello. &nbsp; &gt;
                 </p>
