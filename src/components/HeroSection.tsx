@@ -31,7 +31,7 @@ export default function HeroSection() {
     };
 
     return (
-        <div className="flex flex-col-reverse md:flex-row min-h-screen justify-center md:gap-16 items-center text-white">
+        <div className="flex flex-col-reverse md:flex-row md:min-h-screen justify-end md:justify-center md:gap-16 items-center text-white">
             <div className="flex flex-col gap-2 md:gap-5">
                 <p className="md:text-xl text-mono hover:text-white">
                     &lt;&nbsp;Hello. &nbsp; &gt;

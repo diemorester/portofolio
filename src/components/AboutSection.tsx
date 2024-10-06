@@ -15,7 +15,7 @@ export default function AboutSection() {
     }
 
     return (
-        <div id="about" className="flex flex-col justify-center min-h-screen gap-2 md:gap-5">
+        <div id="about" className="flex flex-col justify-center min-h-screen gap-2 md:gap-5 max-md:pt-[100px]">
             <div>
                 <p className="text-mono hover:text-white md:text-xl">
                     &lt;&nbsp;About&nbsp; &nbsp; &gt;

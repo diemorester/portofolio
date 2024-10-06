@@ -18,7 +18,7 @@ export default function SkillsSection() {
         })
     }
     return (
-        <div id="skill" className="min-h-screen flex flex-col justify-center md:gap-10">
+        <div id="skill" className="min-h-screen flex flex-col justify-center pt-[130px] md:gap-10">
             <div>
                 <p className="text-mono hover:text-white md:text-xl">
                     &lt;&nbsp;Skills&nbsp; &nbsp; &gt;
@@ -80,7 +80,7 @@ export default function SkillsSection() {
                     </div>
                 </div>
             </div>
-            <div className="pt-[80px]">
+            <div>
                 <Service />
             </div>
         </div>
