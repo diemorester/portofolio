@@ -52,7 +52,7 @@ export default function Service() {
                     &lt;&nbsp;Perks&nbsp; &nbsp; &nbsp;&gt;
                 </p>
             </div>
-            <div className="grid md:grid-cols-3 text-white gap-5 md:gap-12">
+            <div className="grid md:grid-cols-3 text-white gap-5 md:gap-x-12">
                 {items.map((item) => (
                     <div
                         key={item.id}
