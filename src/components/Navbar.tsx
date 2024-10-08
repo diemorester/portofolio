@@ -50,7 +50,7 @@ export default function Navbar() {
                         <a href="#service" className="text-mono hover:text-white" onClick={handleClose}>SERVICES</a>
                     </div>
                     <div>
-                        <a href="" className="text-mono hover:text-white" onClick={handleClose}>PROJECTS</a>
+                        <a href="#project" className="text-mono hover:text-white" onClick={handleClose}>PROJECTS</a>
                     </div>
                     <div className="flex gap-6 pt-3">
                         <a href="https://github.com/diemorester" target="_blank" rel="noopener noreferrer">

@@ -11,7 +11,7 @@ const projectItems = [
 
 export default function ProjectSection() {
     return (
-        <div className="">
+        <div id="project" className="">
             <Carousel items={projectItems} />
         </div>
     )

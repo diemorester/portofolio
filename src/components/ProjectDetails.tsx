@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 
-// Define the type for project details
 type ProjectDetail = {
     title: string;
     description: string;
@@ -8,15 +7,14 @@ type ProjectDetail = {
     additionalInfo: string;
 };
 
-// Define the project details object with specific keys
 const projectDetails: Record<string, ProjectDetail> = {
-    'project-1': {
+    'kopikalyan-companyprofile': {
         title: 'kopikalyan companyprofile',
         description: 'loremloremloremlreomrloemrelomreomrelomreom',
         image: 'https://via.placeholder.com/800x500',
         additionalInfo: 'additional information',
     },
-    'project-2': {
+    'the-sept': {
         title: 'the sept',
         description: 'loremloremloremlreomrloemrelomreomrelomreom',
         image: 'https://via.placeholder.com/800x500',
@@ -49,9 +47,8 @@ const projectDetails: Record<string, ProjectDetail> = {
 };
 
 export default function ProjectDetails() {
-    const { slug } = useParams<{ slug: string }>(); // Specify the type for useParams
+    const { slug } = useParams<{ slug: string }>();
 
-    // Check if slug exists and is a valid key in projectDetails
     const project = slug && projectDetails[slug];
 
     if (!project) {
@@ -59,7 +56,7 @@ export default function ProjectDetails() {
     }
 
     return (
-        <div className="min-h-screen p-5 md:p-10 flex flex-col items-center">
+        <div className="min-h-screen bg-black p-5 md:p-10 flex flex-col items-center">
             <h1 className="text-4xl font-bold mb-5">{project.title}</h1>
             <img src={project.image} alt={project.title} className="w-full max-w-[800px] h-auto mb-5" />
             <p className="text-lg mb-3">{project.description}</p>

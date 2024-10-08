@@ -58,7 +58,7 @@ export default function Carousel({ items }: CarouselProps) {
     }, [emblaAPI, items.length, slidesToScroll]);
 
     return (
-        <div className="relative flex flex-col justify-center gap-2 md:gap-10 min-h-screen">
+        <div className="relative flex flex-col justify-center gap-2 md:gap-8 min-h-screen">
             <div>
                 <p className="md:text-xl text-mono hover:text-white">
                     &lt;&nbsp;Projects&nbsp; &nbsp; &gt;
@@ -70,7 +70,7 @@ export default function Carousel({ items }: CarouselProps) {
                         {items.map((item, index) => (
                             <div key={index} className={`embla__slide flex-none ${slidesToScroll === 1 ? 'w-full' : 'w-1/2'}`}>
                                 <a
-                                    href={`/projects/${item.slug}`}
+                                    href={`/project/${item.slug}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -98,12 +98,12 @@ export default function Carousel({ items }: CarouselProps) {
                         </button>
                     </div>
                 </div>
-                <div className="flex justify-center gap-1 md:pt-5">
+                <div className="flex justify-center gap-1 pt-2 md:pt-5">
                     {Array.from({ length: slidesLength }).map((_, index) => (
                         <button
                             key={index}
                             onClick={() => scrollTo(index)}
-                            className={`h-3 rounded-full border-2 border-mono ${currentIndex === index ? 'w-6' : 'w-3'}`}
+                            className={`h-2 md:h-3 rounded-full border md:border-2 border-mono ${currentIndex === index ? 'w-3 md:w-6' : 'w-2 md:w-3'}`}
                         />
                     ))}
                 </div>
