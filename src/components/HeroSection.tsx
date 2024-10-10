@@ -54,7 +54,7 @@ export default function HeroSection() {
                     <p>{wrapWithHoverEffect("I am a Web Developer based in Bandung, Indonesia.")}</p>
                     <p>{wrapWithHoverEffect("My areas of specialisation are:")}</p>
                 </div>
-                <p className="text-5xl md:text-8xl">
+                <p className="text-5xl md:text-7xl">
                     <span className="hover:text-mono transition duration-200">
                         {text[heading]}
                     </span>

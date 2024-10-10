@@ -13,6 +13,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </Router>
   </React.StrictMode>
