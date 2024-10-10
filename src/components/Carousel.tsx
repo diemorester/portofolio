@@ -60,13 +60,13 @@ export default function Carousel({ items }: CarouselProps) {
     return (
         <div className="relative flex flex-col justify-center gap-2 md:gap-8 min-h-screen">
             <div>
-                <p className="md:text-xl text-mono hover:text-white">
+                <p className="md:text-xl text-mono hover:text-white inline-flex">
                     &lt;&nbsp;Projects&nbsp; &nbsp; &gt;
                 </p>
             </div>
             <div>
                 <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex gap-x-3">
+                    <div className="flex gap-x-5">
                         {items.map((item, index) => (
                             <div key={index} className={`embla__slide flex-none ${slidesToScroll === 1 ? 'w-full' : 'w-1/2'}`}>
                                 <a
@@ -77,7 +77,7 @@ export default function Carousel({ items }: CarouselProps) {
                                     <img
                                         src={item.image}
                                         alt={`Slide ${index}`}
-                                        className="w-full max-h-[600px] object-fill"
+                                        className="w-full md:h-[350px] object-cover"
                                     />
                                 </a>
                             </div>
@@ -86,14 +86,18 @@ export default function Carousel({ items }: CarouselProps) {
                     <div>
                         <button
                             onClick={scrollPrev}
-                            className="absolute -left-[5%] top-[50%] max-md:hidden rounded-full p-2 z-30 text-white">
+                            disabled={currentIndex === 0}
+                            className={`absolute -left-[5%] top-[50%] max-md:hidden rounded-full p-2 z-30 text-mono 
+                                ${currentIndex === 0 ? 'opacity-50 cursor-pointer' : 'hover:text-white'}`}>
                             <FaArrowLeft size={28} />
                         </button>
                     </div>
                     <div>
                         <button
                             onClick={scrollNext}
-                            className="absolute -right-[5%] top-[50%] max-md:hidden rounded-full p-2 z-30 text-white">
+                            disabled={currentIndex === slidesLength - 1}
+                            className={`absolute -right-[5%] top-[50%] max-md:hidden rounded-full p-2 z-30 text-mono 
+                                ${currentIndex === slidesLength - 1 ? 'opacity-50 cursor-pointer' : 'hover:text-white'}`}>
                             <FaArrowRight size={28} />
                         </button>
                     </div>

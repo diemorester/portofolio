@@ -48,7 +48,7 @@ export default function Service() {
     return (
         <div id="service" className="flex flex-col justify-center pt-[50px] md:pb-[90px] md:gap-10">
             <div>
-                <p className="text-mono hover:text-white md:text-xl">
+                <p className="text-mono hover:text-white md:text-xl inline-flex">
                     &lt;&nbsp;Perks&nbsp; &nbsp; &nbsp;&gt;
                 </p>
             </div>

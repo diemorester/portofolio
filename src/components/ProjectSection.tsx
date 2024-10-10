@@ -1,7 +1,8 @@
 import Carousel from "./Carousel";
+import img1 from '../assets/thumbnailkopikalyan.png'
 
 const projectItems = [
-    { image: 'https://via.placeholder.com/800x400', slug: 'kopikalyan-companyprofile' },
+    { image: img1, slug: 'kopikalyan-companyprofile' },
     { image: 'https://via.placeholder.com/800x400', slug: 'the-sept' },
     { image: 'https://via.placeholder.com/800x400', slug: 'project-3' },
     { image: 'https://via.placeholder.com/800x400', slug: 'project-4' },

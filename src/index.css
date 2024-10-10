@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-3d {
+  perspective: 1000px; 
+}
+
+.card-3d-inner {
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-3d:hover .card-3d-inner {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.25);
+}

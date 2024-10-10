@@ -3,15 +3,16 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ProjectSection from "./components/ProjectSection";
 import SkillsSection from "./components/SkillSection";
+import Layout from "./components/Layout"; //
 
 export default function App() {
   return (
-    <div className="bg-black font-space-mono cursor-default px-5 md:px-[137px]">
+    <Layout>
       <Navbar />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
       <ProjectSection />
-    </div>
-  )
+    </Layout>
+  );
 }
