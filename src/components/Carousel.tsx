@@ -77,7 +77,7 @@ export default function Carousel({ items }: CarouselProps) {
                                     <img
                                         src={item.image}
                                         alt={`Slide ${index}`}
-                                        className="w-full md:h-[350px] object-cover"
+                                        className="w-full h-[350px] object-cover"
                                     />
                                 </a>
                             </div>

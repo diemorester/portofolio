@@ -6,7 +6,6 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
     const handleClose = (): void => setIsOpen(false);
 
     useEffect(() => {
@@ -34,6 +33,9 @@ export default function Navbar() {
                             <ImCross size={30} className="fill-mono hover:fill-white" />
                         </button>)}
                 </div>
+                {/* <div>
+                    "https://trakteer.id/diemorester/tip"
+                </div> */}
             </div>
             <div className={`transition-all ease-in-out duration-700 fixed inset-0 bg-black z-40 ${isOpen ? 'w-screen h-screen' : 'h-0 overflow-hidden'}`}>
                 <div className={`flex flex-col justify-center gap-3 text-3xl font-bold items-center absolute w-full h-full px-8 transition-opacity duration-700 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>

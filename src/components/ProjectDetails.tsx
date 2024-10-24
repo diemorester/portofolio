@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import img0 from '../assets/bg-noise.png';
 import img1 from '../assets/headerkopikalyan.png';
-import { useState } from "react";
+import img2 from '../assets/thumbnail-thesept-1.png'
+import img3 from '../assets/header-arcanistlabs.png'
 
 type ProjectDetail = {
     title: string;
@@ -12,6 +14,19 @@ type ProjectDetail = {
 };
 
 const projectDetails: Record<string, ProjectDetail> = {
+    'arcanist-labs-companyprofile': {
+        title: 'ArcanistLabs',
+        image: img3,
+        description: "ArcanistLabs is a web development startup focused on creating sleek, responsive websites. With a modern design approach, the site offers easy navigation and showcases the company's expertise in building custom web solutions, making it an ideal platform for clients seeking to elevate their online presence.",
+        url: "https://arcanist-labs.vercel.app/",
+        additionalInfo: [
+            "UI/UX Design",
+            "Landing Page Development",
+            "Manage Responsiveness",
+            "Scroll-Based Animations",
+            "Performance Optimization"
+        ],
+    },
     'kopikalyan-companyprofile': {
         title: 'Kopikalyan',
         image: img1,
@@ -27,7 +42,7 @@ const projectDetails: Record<string, ProjectDetail> = {
     },
     'the-sept': {
         title: 'the sept',
-        image: 'https://via.placeholder.com/800x500',
+        image: img2,
         description: 'loremloremloremlreomrloemrelomreomrelomreom',
         url: "https://portofolio-ochre-chi.vercel.app/",
         additionalInfo: [
@@ -36,19 +51,6 @@ const projectDetails: Record<string, ProjectDetail> = {
             "Informative sections about the coffee shop's history, menu, and services",
             "Creative UI/UX design to enhance user engagement",
             "Engaging photo gallery showcasing the ambiance and offerings"
-        ],
-    },
-    'project-3': {
-        title: 'Project Three',
-        image: 'https://via.placeholder.com/800x500',
-        description: 'please order my service so i can add more to my portofolio lol :(',
-        url: "https://portofolio-ochre-chi.vercel.app/",
-        additionalInfo: [
-            "xixixixi",
-            "lol",
-            ":(",
-            "lol",
-            "xixixixi"
         ],
     },
     'project-4': {
@@ -156,7 +158,7 @@ export default function ProjectDetails() {
                     <div className="flex flex-col gap-5 justify-between text-white md:w-1/2">
                         <h1 className="text-xl md:text-3xl font-bold">{hoverWrapper(project.title)}</h1>
                         <p className="text-sm">{hoverWrapper(project.description)}</p>
-                        <p className="text-sm md:text-xl">{hoverWrapper("Web's functionality:")}</p>
+                        <p className="text-sm md:text-xl">{hoverWrapper("My Scope of Work")}</p>
                         <ul className="list-disc list-inside">
                             {project.additionalInfo.map((info, index) => (
                                 <li key={index} className="text-xs">
