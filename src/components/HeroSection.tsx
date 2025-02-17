@@ -1,46 +1,34 @@
-import img1 from "../assets/hero.gif";
 import { useEffect, useState } from "react";
+import hoverWrapper from "./HoverWrapper";
 
 export default function HeroSection() {
     const text: string[] = [
         "JavaScript", "React", "Next.JS", "HTML", "CSS",
         "TypeScript", "Tailwind", "MySQL", "Node.JS",
-        "Express", "Prisma"
+        "Express", "Prisma", "MongoDB"
     ];
-    const [heading, setHeading] = useState<number>(0);
+
+    const [header, setHeader] = useState<number>(0);
 
     useEffect(() => {
-        const changeHeading = setInterval(
-            () => setHeading((idx) => (idx === text.length - 1 ? 0 : idx + 1)),
-            666
+        const changeHeader = setInterval(
+            () => setHeader((idx) => (idx === text.length - 1 ? 0 : idx + 1)),
+            1168
         );
-        return () => clearInterval(changeHeading);
+        return () => clearInterval(changeHeader);
     }, []);
 
-    const wrapWithHoverEffect = (sentence: string) => {
-        return sentence.split(/(\s+|(?=\W))/).map((part, idx) => {
-            if (part.trim() === '') {
-                return part;
-            }
-            return (
-                <span key={idx} className="hover:text-mono transition duration-200">
-                    {part}
-                </span>
-            );
-        });
-    };
-
     return (
-        <div className="flex flex-col-reverse md:flex-row md:min-h-screen justify-end md:justify-center md:gap-16 items-center text-white">
+        <div className="flex flex-row w-full h-screen px-5 justify-center items-center text-off-white">
             <div className="flex flex-col gap-2 md:gap-5">
                 <div>
-                    <p className="md:text-xl text-mono hover:text-white inline-flex">
+                    <p className="text-lg md:text-2xl text-mono hover:text-off-white inline-flex">
                         &lt;&nbsp;Hello. &nbsp; &gt;
                     </p>
                 </div>
-                <div className="md:text-xl px-[6px]">
+                <div className="md:text-xl px-2">
                     <p>
-                        {wrapWithHoverEffect("My name is")}&nbsp;
+                        {hoverWrapper("my name is")}&nbsp;
                         <span className="font-bold hover:text-mono transition duration-200">
                             Rahadian
                         </span>&nbsp;
@@ -51,18 +39,15 @@ export default function HeroSection() {
                             Zulfikar
                         </span>.
                     </p>
-                    <p>{wrapWithHoverEffect("I am a Web Developer based in Bandung, Indonesia.")}</p>
-                    <p>{wrapWithHoverEffect("My areas of specialisation are:")}</p>
+                    <p>{hoverWrapper("i am a full-stack web developer based in Bandung, Indonesia.")}</p>
+                    <p>{hoverWrapper("my areas of specialisation are")}</p>
                 </div>
-                <p className="text-5xl md:text-7xl">
+                <p className="mx-auto md:mx-0 py-11 md:py-0 text-5xl md:text-7xl">
                     <span className="hover:text-mono transition duration-200">
-                        {text[heading]}
+                        {text[header]}
                     </span>
                 </p>
             </div>
-            <div className="place-content-center">
-                <img src={img1} alt="hero" width={400} height={300} />
-            </div>
         </div>
     );
-}
+};
