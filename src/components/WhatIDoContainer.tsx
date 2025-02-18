@@ -7,7 +7,7 @@ export default function WhatIDoContainer() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const containerWhatWeDo = document.getElementById("container-what-we-do");
+            const containerWhatWeDo = document.getElementById("container-what-i-do");
 
             if (containerWhatWeDo) {
                 const midPoint = window.innerHeight / 4;
@@ -34,9 +34,9 @@ export default function WhatIDoContainer() {
                 <WhyMeSection isWhiteText={isWhiteText} />
             </div>
             <motion.div
-                id="container-what-we-do"
+                id="container-what-i-do"
                 animate={{
-                    backgroundColor: isWhiteText ? "" : "#F0F4F8",
+                    backgroundColor: isWhiteText ? "#000000" : "#F0F4F8",
                     color: isWhiteText ? "#F0F4F8" : "",
                 }}
                 initial={{

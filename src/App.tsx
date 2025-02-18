@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
+// import Layout from "./components/Layout";
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
 import ProjectSection from "./components/ProjectSection";
-// import SkillsSection from "./components/SkillSection";
-import Layout from "./components/Layout";
 import WhatIDoContainer from "./components/WhatIDoContainer";
+import WhatIDoSection from "./components/WhatIDoSection";
+import StackSection from "./components/StackSection";
+import FooterSection from "./components/FooterSection";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,13 +26,17 @@ export default function App() {
   }
 
   return (
-    <Layout>
+    <div className="relative">
       <Navbar />
       <HeroSection />
       <AboutSection isWhiteMode={false} />
       <WhatIDoContainer />
-      {/* <SkillsSection /> */}
+      <WhatIDoSection />
+      <StackSection />
       <ProjectSection />
-    </Layout>
+      <div className='h-screen'>
+        <FooterSection />
+      </div>
+    </div>
   );
 }

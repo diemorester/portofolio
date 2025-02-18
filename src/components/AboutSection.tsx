@@ -29,22 +29,13 @@ export default function AboutSection({ isWhiteMode }: AboutSectionProps) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // const fadeInOut = {
-    //     hidden: { opacity: 0, y: 20 },
-    //     visible: (i: number) => ({
-    //         opacity: 1,
-    //         y: 0,
-    //         transition: { duration: 0.5, delay: i * 0.1 },
-    //     }),
-    // };
-
     // const textColor = isPassing ? "#000000" : isWhiteMode ? "#000000" : "#F0F4F8";
 
     return (
         <div
+            id="about-section"
             ref={sectionRef}
-            id="about"
-            className={`w-full flex flex-col justify-center px-5 md:px-[137px] pb-5 md:pb-96 transition-colors duration-75 ${isPassing ? "bg-off-white" : isWhiteMode ? "bg-off-white" : "text-off-white"
+            className={`w-full flex relative z-30 flex-col justify-center px-5 md:px-[137px] pt-3 md:pt-6 pb-16 md:pb-96 transition-colors duration-75 ${isPassing ? "bg-off-white" : isWhiteMode ? "bg-off-white" : "text-off-white bg-black"
                 }`}
         >
             {/* <div
@@ -59,19 +50,19 @@ export default function AboutSection({ isWhiteMode }: AboutSectionProps) {
                     transition: "color 0.5s ease-in-out",
                 }}
             > */}
-                <p className="pb-2 text-mono hover:text-neutral-600 text-lg md:text-2xl inline-flex">
-                    &lt;&nbsp;About&nbsp; &nbsp; &gt;
-                </p>
+            <p className="pb-2 text-mono hover:text-neutral-600 text-lg md:text-2xl inline-flex">
+                &lt;&nbsp;About&nbsp; &nbsp; &gt;
+            </p>
             {/* </div> */}
 
             <div className="px-2 max-sm:text-sm block gap-5">
                 <div
                     className="animate-fade-in float-left object-cover w-[35%] md:w-[200px] mr-6 my-2"
-                    // initial="hidden"
-                    // whileInView="visible"
-                    // variants={fadeInOut}
-                    // custom={0}
-                    // viewport={{ once: false, amount: 0.1 }}
+                // initial="hidden"
+                // whileInView="visible"
+                // variants={fadeInOut}
+                // custom={0}
+                // viewport={{ once: false, amount: 0.1 }}
                 >
                     <img src={img1} alt="foto-porto" />
                 </div>

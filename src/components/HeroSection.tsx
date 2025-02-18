@@ -19,7 +19,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <div className="flex flex-row w-full h-screen px-5 justify-center items-center text-off-white">
+        <div id="hero-section" className="flex flex-row w-full relative z-30 bg-black h-screen px-5 justify-center items-center text-off-white">
             <div className="flex flex-col gap-2 md:gap-5">
                 <div>
                     <p className="text-lg md:text-2xl text-mono hover:text-off-white inline-flex">

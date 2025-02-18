@@ -69,7 +69,7 @@ export default function WhyMeSection({ isWhiteText }: WhyMeSectionProps) {
     };
 
     return (
-        <div id="why-us-section" className="flex flex-col justify-between relative text-neutral-300 z-20">
+        <div id="why-me-section" className="flex flex-col justify-between relative text-neutral-300 z-30">
             <div ref={ref}>
                 {paragraph.map((text, index) => (
                     <motion.div
@@ -79,7 +79,7 @@ export default function WhyMeSection({ isWhiteText }: WhyMeSectionProps) {
                             isColourActive[index]
                                 ? {
                                     color: isWhiteText ? '#ffffff' : '#000000',
-                                    backgroundColor: isWhiteText ? 'transparent' : '#f0f4f8 '
+                                    backgroundColor: isWhiteText ? '#000000' : '#f0f4f8 '
                                 }
                                 : { color: '#D4D4D4' }
                         }
