@@ -20,7 +20,7 @@ export default function Navbar() {
 
             if (aboutSection && containerSection && projectSection) {
                 const buffer = 35;
-                const aboutSectionBottom = aboutSection.offsetTop + aboutSection.offsetHeight - buffer;
+                const aboutSectionBottom = aboutSection.offsetTop + buffer;
                 const containerSectionTop = containerSection.offsetTop - buffer;
                 const projectSectionBottom = projectSection.offsetTop + projectSection.offsetHeight - buffer;
 

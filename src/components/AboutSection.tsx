@@ -1,35 +1,16 @@
-import { useEffect, useState, useRef } from "react";
-// import { motion } from "framer-motion";
+import { useRef } from "react";
+
 import img1 from "../assets/foto-porto.jpg";
 import hoverWrapper from "./HoverWrapper";
+import { useScroll } from "./ui/scrollContext";
 
 interface AboutSectionProps {
     isWhiteMode: boolean;
 }
 
 export default function AboutSection({ isWhiteMode }: AboutSectionProps) {
-    const [isPassing, setIsPassing] = useState(false);
+    const { isPassing } = useScroll();
     const sectionRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (sectionRef.current) {
-                const rect = sectionRef.current.getBoundingClientRect();
-
-                // Saat bagian atas section mulai keluar dari viewport, ubah warna
-                if (rect.top < -50) {
-                    setIsPassing(true);
-                } else {
-                    setIsPassing(false);
-                }
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    // const textColor = isPassing ? "#000000" : isWhiteMode ? "#000000" : "#F0F4F8";
 
     return (
         <div

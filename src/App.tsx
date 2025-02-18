@@ -9,6 +9,7 @@ import WhatIDoContainer from "./components/WhatIDoContainer";
 import WhatIDoSection from "./components/WhatIDoSection";
 import StackSection from "./components/StackSection";
 import FooterSection from "./components/FooterSection";
+import { ScrollProvider } from "./components/ui/scrollContext";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,17 +27,19 @@ export default function App() {
   }
 
   return (
-    <div className="relative">
-      <Navbar />
-      <HeroSection />
-      <AboutSection isWhiteMode={false} />
-      <WhatIDoContainer />
-      <WhatIDoSection />
-      <StackSection />
-      <ProjectSection />
-      <div className='h-screen'>
-        <FooterSection />
-      </div>
+    <div className="relative font-space-mono">
+      <ScrollProvider >
+        <Navbar />
+        <HeroSection />
+        <AboutSection isWhiteMode={false} />
+        <WhatIDoContainer />
+        <WhatIDoSection />
+        <StackSection />
+        <ProjectSection />
+        <div className='h-screen'>
+          <FooterSection />
+        </div>
+      </ScrollProvider>
     </div>
   );
 }

@@ -2,8 +2,9 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import img0 from '../assets/bg-noise.png';
 import img1 from '../assets/headerkopikalyan.png';
-import img2 from '../assets/thumbnail-thesept-1.png'
-import img3 from '../assets/header-arcanistlabs.png'
+import img2 from '../assets/thumbnail-thesept-1.png';
+import img3 from '../assets/header-arcanistlabs.png';
+import img4 from '../assets/erp-aksata.jpeg';
 
 type ProjectDetail = {
     title: string;
@@ -14,6 +15,19 @@ type ProjectDetail = {
 };
 
 const projectDetails: Record<string, ProjectDetail> = {
+    'erp-aksata': {
+        title: 'ERP Aksata',
+        image: img4,
+        description: "Aksata ERP is a lightweight and efficient enterprise resource planning system designed for seamless business management. With its optimized performance, Aksata runs smoothly even on low-spec devices, ensuring accessibility and reliability for businesses of all sizes.",
+        url: "https://erp.ristoan.id/dashboard",
+        additionalInfo: [
+            "UI/UX Design",
+            "Front-end Development",
+            "Back-end Development and API Design",
+            "Database Management and Optimization",
+            "System Deployment and Infrastructure Management"
+        ]
+    },
     'arcanist-labs-companyprofile': {
         title: 'ArcanistLabs',
         image: img3,
@@ -51,19 +65,6 @@ const projectDetails: Record<string, ProjectDetail> = {
             "Informative sections about the coffee shop's history, menu, and services",
             "Creative UI/UX design to enhance user engagement",
             "Engaging photo gallery showcasing the ambiance and offerings"
-        ],
-    },
-    'project-4': {
-        title: 'Project Four',
-        image: 'https://via.placeholder.com/800x500',
-        description: 'please order my service so i can add more to my portofolio lol :(',
-        url: "https://portofolio-ochre-chi.vercel.app/",
-        additionalInfo: [
-            "xixixixi",
-            "lol",
-            ":(",
-            "lol",
-            "xixixixi"
         ],
     },
     'project-5': {
@@ -168,7 +169,7 @@ export default function ProjectDetails() {
                         </ul>
                     </div>
                     <div className="md:w-1/2 px-11">
-                        <a href={project.url} target="_blank" rel="noopener noreferrer" >
+                        <a href={project.url} rel="noopener noreferrer" >
                             <div className="card-3d" onMouseMove={handleMouseMove} onMouseLeave={resetRotation} >
                                 <div
                                     className="card-3d-inner border border-white shadow-lg overflow-hidden"
