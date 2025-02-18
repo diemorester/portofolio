@@ -5,7 +5,7 @@ import img3 from "../assets/github-icon.png"
 import img4 from "../assets/github-repo-icon.png"
 import Service from "./ServiceSection"
 
-export default function SkillsSection() {
+export default function StackSection() {
     const hoverWrapper = (sentence: string) => {
         return sentence.split(/(\s+|(?=\W))/).map((part, idx) => {
             if (part.trim() === '') {
@@ -19,7 +19,7 @@ export default function SkillsSection() {
         });
     };
 
-    const fadeIn = {
+    const fadeInOut = {
         hidden: { opacity: 0, y: 20 },
         visible: (i: number) => ({
             opacity: 1,
@@ -29,10 +29,10 @@ export default function SkillsSection() {
     };
 
     return (
-        <div id="skill" className="min-h-screen flex flex-col justify-center pt-[130px] md:gap-10">
+        <div id="stack-section" className="min-h-screen relative z-30 bg-black flex flex-col justify-center px-5 md:px-[137px] pt-5 md:pt-12 md:gap-10">
             <div>
-                <p className="text-mono hover:text-white md:text-xl inline-flex">
-                    &lt;&nbsp;Skills&nbsp; &nbsp; &gt;
+                <p className="pb-2 text-mono hover:text-white md:text-xl inline-flex">
+                    &lt;&nbsp;Stacks&nbsp; &nbsp; &gt;
                 </p>
             </div>
             <div className="flex flex-col justify-center gap-10 px-2 md:flex-row md:justify-between">
@@ -42,15 +42,15 @@ export default function SkillsSection() {
                             className="animate-fade-in"
                             initial="hidden"
                             whileInView="visible"
-                            variants={fadeIn}
+                            variants={fadeInOut}
                             custom={0}
                         >
-                            {hoverWrapper("Skills i possess as a")}
+                            {hoverWrapper("stacks i possess as a")}
                         </motion.p>
                         <motion.p
                             initial="hidden"
                             whileInView="visible"
-                            variants={fadeIn}
+                            variants={fadeInOut}
                             custom={1}
                         >
                             {hoverWrapper("web developer")}
@@ -68,7 +68,7 @@ export default function SkillsSection() {
                                 key={index}
                                 initial="hidden"
                                 whileInView="visible"
-                                variants={fadeIn}
+                                variants={fadeInOut}
                                 custom={index + 2}
                             >
                                 {hoverWrapper(skill)}
@@ -80,7 +80,7 @@ export default function SkillsSection() {
                     className="animate-fade-in grid grid-cols-4 md:max-w-[40%] gap-7"
                     initial="hidden"
                     whileInView="visible"
-                    variants={fadeIn}
+                    variants={fadeInOut}
                     custom={8}>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 2048 2048"><path fill="#E44C25" d="M983 102h82l44 3 36 4 45 7 39 8 44 11 39 12 32 11 28 11 28 12 30 14 22 11 22 12 26 15 22 14 27 18 18 13 19 14 16 13 10 8 13 11 14 12 31 29 22 22 7 8 7 7 7 8 9 10 9 11 11 13 11 14 16 21 13 19 8 11 11 17 15 24 15 26 17 32 16 33 13 30 14 36 14 41 10 35 9 36 8 39 7 45 4 36 3 45v80l-3 45-4 36-7 45-8 39-11 44-12 39-11 32-11 28-12 28-14 30-11 22-12 22-15 26-14 22-18 27-13 18-14 19-13 16-8 10-11 13-9 10-7 8-9 10-16 17-22 22-8 7-7 7-8 7-10 9-11 9-13 11-14 11-21 16-19 13-11 8-17 11-24 15-26 15-32 17-33 16-30 13-36 14-41 14-35 10-36 9-39 8-45 7-37 4-25 2-20 1h-79l-45-3-36-4-45-7-39-8-44-11-39-12-40-14-39-16-35-16-26-13-22-12-26-15-22-14-27-18-18-13-19-14-16-13-10-8-13-11-14-12-31-29-22-22-7-8-7-7-7-8-9-10-9-11-11-13-11-14-16-21-13-19-8-11-11-17-15-24-15-26-17-32-16-33-13-30-14-36-14-41-12-42-9-38-7-36-6-39-4-36-3-44v-81l3-45 5-44 7-42 7-34 11-44 12-39 11-32 16-40 13-29 14-29 12-23 14-24 8-14 12-19 18-27 13-18 14-19 13-16 8-10 11-13 12-14 29-31 22-22 8-7 7-7 8-7 10-9 11-9 13-11 14-11 21-16 19-13 11-8 17-11 24-15 26-15 32-17 33-16 30-13 36-14 41-14 42-12 38-9 36-7 39-6 36-4z" /><path fill="#FEFEFE" d="M628 685h792l-1 17-24 269-31 348-15 168-2 7-314 87-7 2-9-1-248-69-68-19-2-6-30-337-41-460z" /><path fill="#E44C25" d="M773 847h498l1 3-8 100-1 1H883l9 81 1 17h359l-1 17-23 281-1 10-128 35-74 20-42-11-82-22-78-21-3-1-3-25-12-123v-10h99l2 4 7 67v7l16 4 81 23 11 3 10-1 98-28 4-1 1-2 10-118 1-7H801l-2-16-26-282z" /><path fill="#FEFEFE" d="M1032 465h53l13 22 13 21 5 8 2 1 2-5 13-22 15-24 1-1h52v150h-49v-73l-4 4-12 19-15 23-4 6h-2l-12-19-15-23-6-9-1 72h-49zM702 465h50v50h46v-50h50v150h-50v-50h-46v50h-50zM871 465h138v49h-44v101h-50l-1-100-43-1zM1227 465h50v101h71v49h-121z" /></svg>
