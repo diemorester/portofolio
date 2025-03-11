@@ -3,13 +3,14 @@ import img1 from '../assets/thumbnail-kopikalyan.png'
 import img2 from '../assets/thumbnail-thesept-1.png'
 import img3 from '../assets/thumbnail-arcanistlabs.png'
 import img4 from '../assets/erp-aksata.jpeg'
+import img5 from '../assets/begriff.png'
 
 const projectItems = [
-    { image: img4, slug: 'erp-aksata' },
+    { image: img5, slug: 'begriff-kaffee' },
     { image: img3, slug: 'arcanist-labs-companyprofile' },
     { image: img1, slug: 'kopikalyan-companyprofile' },
+    { image: img4, slug: 'erp-aksata' },
     { image: img2, slug: 'the-sept' },
-    { image: 'https://via.placeholder.com/800x400', slug: 'project-5' },
     { image: 'https://via.placeholder.com/800x400', slug: 'project-6' },
 ];
 
