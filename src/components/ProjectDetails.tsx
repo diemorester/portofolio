@@ -5,6 +5,7 @@ import img1 from '../assets/headerkopikalyan.png';
 import img2 from '../assets/thumbnail-thesept-1.png';
 import img3 from '../assets/header-arcanistlabs.png';
 import img4 from '../assets/erp-aksata.jpeg';
+import img5 from '../assets/begriff.png'
 
 type ProjectDetail = {
     title: string;
@@ -15,10 +16,23 @@ type ProjectDetail = {
 };
 
 const projectDetails: Record<string, ProjectDetail> = {
+    'begriff-kaffee': {
+        title: 'Begriff Kaffee Website',
+        image: img5,
+        description: "I designed the website while encapsulating the company's brand and vision regarding how they want to package themselves. Elegant, Edgy, Mysterious.",
+        url: "https://begriff-gilt.vercel.app/",
+        additionalInfo: [
+            "UI/UX Design",
+            "Landing Page Development",
+            "Manage Responsiveness",
+            "Scroll-Based Animations",
+            "Performance Optimization"
+        ]
+    },
     'erp-aksata': {
-        title: 'ERP Aksata',
+        title: 'ERP application',
         image: img4,
-        description: "Aksata ERP is a lightweight and efficient enterprise resource planning system designed for seamless business management. With its optimized performance, Aksata runs smoothly even on low-spec devices, ensuring accessibility and reliability for businesses of all sizes.",
+        description: "It is a lightweight and efficient enterprise resource planning system designed for seamless business management. With its optimized performance, Aksata runs smoothly even on low-spec devices, ensuring accessibility and reliability for businesses of all sizes.",
         url: "https://erp.ristoan.id/dashboard",
         additionalInfo: [
             "UI/UX Design",
@@ -65,19 +79,6 @@ const projectDetails: Record<string, ProjectDetail> = {
             "Informative sections about the coffee shop's history, menu, and services",
             "Creative UI/UX design to enhance user engagement",
             "Engaging photo gallery showcasing the ambiance and offerings"
-        ],
-    },
-    'project-5': {
-        title: 'Project Five',
-        image: 'https://via.placeholder.com/800x500',
-        description: 'please order my service so i can add more to my portofolio lol :(',
-        url: "https://portofolio-ochre-chi.vercel.app/",
-        additionalInfo: [
-            "xixixixi",
-            "lol",
-            ":(",
-            "lol",
-            "xixixixi"
         ],
     },
     'project-6': {
@@ -170,12 +171,13 @@ export default function ProjectDetails() {
                     </div>
                     <div className="md:w-1/2 px-11">
                         <a href={project.url} rel="noopener noreferrer" >
-                            <div className="card-3d" onMouseMove={handleMouseMove} onMouseLeave={resetRotation} >
+                            <div className="card-3d group" onMouseMove={handleMouseMove} onMouseLeave={resetRotation} >
                                 <div
-                                    className="card-3d-inner border border-white shadow-lg overflow-hidden"
+                                    className="card-3d-inner shadow-lg overflow-hidden"
                                     style={{ transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)` }}
                                 >
                                     <img src={project.image} alt={project.title} className="w-full h-full object-cover" style={{ imageRendering: 'auto' }} />
+                                    <p className="text-center text-mono group-hover:text-off-white pt-3">click to visit the site</p>
                                 </div>
                             </div>
                         </a>
