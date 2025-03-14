@@ -21,7 +21,7 @@ export default function FooterSection() {
                             <span className="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
                         </button>
                     </a>
-                    <a href="https://www.instagram.com/die.morester/" target="_blank" className="relative group">
+                    <a href="https://www.instagram.com/rahadianfikar/" target="_blank" className="relative group">
                         <button>
                             <span className="relative">Instagram</span>
                             <span className="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -37,7 +37,7 @@ export default function FooterSection() {
                 <div className='absolute bottom-0 w-full'>
                     <div className='flex justify-between p-8 text-xs md:text-lg'>
                         <p>&#169; 2025 diemorester all rights reserved. </p>
-                        <p>zulfikarahadian@gmail.com</p>
+                        <p>rahadianfikar@gmail.com</p>
                     </div>
                 </div>
             </footer>
