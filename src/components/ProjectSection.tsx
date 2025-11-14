@@ -4,14 +4,15 @@ import img2 from '../assets/thumbnail-thesept-1.png'
 import img3 from '../assets/thumbnail-arcanistlabs.png'
 import img4 from '../assets/erp-aksata.jpeg'
 import img5 from '../assets/begriff.png'
+import img6 from '../assets/thumbnail-marsh.webp'
 
 const projectItems = [
-    { image: img5, slug: 'begriff-kaffee' },
+    { image: img6, slug: 'marsh-store' },
     { image: img3, slug: 'arcanist-labs-companyprofile' },
     { image: img1, slug: 'kopikalyan-companyprofile' },
+    { image: img5, slug: 'begriff-kaffee' },
     { image: img4, slug: 'erp-aksata' },
     { image: img2, slug: 'the-sept' },
-    { image: 'https://via.placeholder.com/800x400', slug: 'project-6' },
 ];
 
 export default function ProjectSection() {

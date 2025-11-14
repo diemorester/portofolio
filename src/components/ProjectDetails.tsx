@@ -6,6 +6,7 @@ import img2 from '../assets/thumbnail-thesept-1.png';
 import img3 from '../assets/header-arcanistlabs.png';
 import img4 from '../assets/erp-aksata.jpeg';
 import img5 from '../assets/begriff.png'
+import img6 from '../assets/header-marsh.webp'
 
 type ProjectDetail = {
     title: string;
@@ -16,6 +17,19 @@ type ProjectDetail = {
 };
 
 const projectDetails: Record<string, ProjectDetail> = {
+    'marsh-store': {
+        title: 'MARSH Store catalog',
+        image:img6,
+        description: "I developed and helped a small portion of UI/UX insights and adjustments and helped to add some UI/UX on detailed parts of the website",
+        url: "https://marsh-store.vercel.app/",
+        additionalInfo: [
+            "Page Development",
+            "Manage Responsiveness",
+            "Front End Features Addition",
+            "Front End Features Optimization",
+            "Performance Optimization"
+        ]
+    },
     'begriff-kaffee': {
         title: 'Begriff Kaffee Website',
         image: img5,
@@ -81,20 +95,6 @@ const projectDetails: Record<string, ProjectDetail> = {
             "Engaging photo gallery showcasing the ambiance and offerings"
         ],
     },
-    'project-6': {
-        title: 'Project Six',
-        image: 'https://via.placeholder.com/800x500',
-        description: 'please order my service so i can add more to my portofolio lol :(',
-        url: "https://portofolio-ochre-chi.vercel.app/",
-        additionalInfo: [
-            "xixixixi",
-            "lol",
-            ":(",
-            "lol",
-            "xixixixi"
-        ],
-    },
-
 };
 
 export default function ProjectDetails() {
